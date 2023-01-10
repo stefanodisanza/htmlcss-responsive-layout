@@ -21,7 +21,7 @@ a{
 }
 
 img{
-    width: 100%;
+    max-width: 100%;
 }
 
 :root{
@@ -44,6 +44,8 @@ img{
 .row{
     display: flex;
     flex-wrap: wrap;
+    align-items: stretch;
+    margin: 0 auto;
 }
 
 .space-between{
@@ -62,6 +64,13 @@ img{
     flex-basis: calc(100%/3*2);
 }
 
+.left-side{
+    flex-basis: 50%;
+}
+.right-side{
+    flex-basis: 50%;
+}
+
 /* BUTTON */
 
 .button{
@@ -75,7 +84,17 @@ img{
 
 }
 
+.blue--button{
+    background-color: var(--blue);
+    color: white;
+    padding: 5px 20px;
+    line-height: 38px;
+    
+    
+}
+
 /* HEADER */
+
 
 .main-header{
     background-color: var(--blue);
@@ -106,6 +125,15 @@ img{
     .header-nav{
         display: none;
     }
+
+    .left-side{
+        flex-basis: 100%;
+    }
+
+    .double{
+        flex-wrap: wrap;
+    }
+
 }
 
 @media only screen and (max-width: 575px){
@@ -123,17 +151,47 @@ img{
 
 .card{
     background-color: var(--lightblue);
-    padding: 20px;
-    border: 1px solid black;
     border-radius: 20px;
-    /* poi disattiva la min-heigt */
     min-height: 200px;
-
+    padding-left: 24px;
 }
+
+.double{
+    display: flex;
+    }
 
 .hero [class^="col-"]{
     padding: 12px;
 }
+
+.h2-blue{
+    color: var(--blue);
+    padding: 34px 0;
+}
+
+.phone{
+    padding-top: 70px;
+    margin: -5px;
+    max-height: 270px;
+}
+
+.p-demo{
+    padding-bottom: 30px;
+}
+
+.center-align{
+    text-align: center;
+}
+
+.icon-blue{
+    color: var(--blue);
+    font-size: 80px;
+}
+
+figure{
+    text-align: center;
+}
+
 
 
 
